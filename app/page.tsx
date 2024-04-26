@@ -1,113 +1,112 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
+import Link from "next/link";
+import { Meow_Script } from "next/font/google";
+
+import pic from "./me.jpg";
+
+const scr = Meow_Script({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <div className="container p-8 flex gap-8 flex-col md:flex-row">
+      <aside className="">
+        <h1
+          className={scr.className +
+            " text-4xl sticky top-0 bg-white dark:bg-neutral-900"}
+        >
+          Emmaline Autumn
+        </h1>
+        <ul className="leading-8">
+          <li>
+            <Link href={"/blog"}>Portfolio</Link>
+          </li>
+          <li>
+            <Link href={"/blog"}>Blog</Link>
+          </li>
+          <li className="mt-4">
+            <a href="https://ko-fi.com/N4N3VZ98R" target="_blank">
+              <img
+                // height="36"
+                // style={"border:0px;height:36px;"}
+                src="https://storage.ko-fi.com/cdn/kofi5.png?v=3"
+                // border="0"
+                className="h-[36px]"
+                alt="Buy Me a Coffee at ko-fi.com"
+              />
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <main className="max-w-prose">
+        <h2 className="text-xl">
+          Hey! I'm Emma{" "}
+          <small className="text-gray-700 dark:text-gray-300 italic text-sm">
+            she/her
+          </small>
+        </h2>
+        <p>Welcome to my site, I hope you enjoy your stay.</p>
+        <p>
+          I am a developer, a game designer, a writer, and an enthusiast of tech
+          and games in general.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+        <div className="flex md:flex-row flex-col gap-4 items-center">
+          <div className="aspect-square rounded-full overflow-clip w-48">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={pic}
+              alt="Emmaline Autumn"
+              className="w-full h-full object-cover object-center"
             />
-          </a>
+          </div>
+          <div>
+            <ul>
+              <li>
+                Github:{" "}
+                <Link
+                  href={"https://github.com/emmalineautumn"}
+                  target="_blank"
+                >
+                  emmalineautumn
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+        <p>
+          You can find my development projects in my portfolio, and you can find
+          links to my games on{" "}
+          <Link href={"https://cyborggrizzly.com"} className="text-blue-500">
+            CyborgGrizzly.com
+          </Link>
+        </p>
+        <div className="flex flex-wrap md:block flex-col-reverse">
+          <em className="float-right w-full md:w-52 p-2 border-2 border-purple-400 bg-gradient-to-br from-purple-200 to-purple-300 rounded-md font-light text-sm my-1 dark:from-purple-900 dark:to-purple-950 dark:border-purple-800">
+            <span className="font-normal">Fun fact:</span>{" "}
+            I built the MD renderer for the blog from scratch for one of my
+            projects!
+          </em>
+          <p>
+            If you're interested in my writing projects, you can check my blog!
+            I also share my thoughts on various topics there, from video games
+            and development to tabletop game design.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </div>
+        <p>
+          If you've stumbled upon my humble site from one of my tools, welcome!
+          You can find support for those tools on my Discord server (link coming
+          soon). You can also join to have a direct line of communication to me
+          to make suggestions and ask questions!
+        </p>
+        <div className="md:absolute bottom-0 left-1/2 md:-translate-x-1/2 md:mt-0 mt-12 bg-pride rounded-lg overflow-clip w-full md:w-1/2">
+          <div className="text-sm bg-white/75 text-black w-full h-full p-1 italic">
+            <p className="mix-blend-exclusion">
+              LGBTQ+
+              <br />
+              Trans Rights are Human Rights
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
