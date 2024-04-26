@@ -40,7 +40,7 @@ export default function Home() {
       </aside>
       <main className="max-w-prose">
         <h2 className="text-xl">
-          Hey! I'm Emma{" "}
+          Hey! I&apos;m Emma{" "}
           <small className="text-gray-700 dark:text-gray-300 italic text-sm">
             she/her
           </small>
@@ -86,16 +86,16 @@ export default function Home() {
             projects!
           </em>
           <p>
-            If you're interested in my writing projects, you can check my blog!
-            I also share my thoughts on various topics there, from video games
-            and development to tabletop game design.
+            If you&apos;re interested in my writing projects, you can check my
+            blog! I also share my thoughts on various topics there, from video
+            games and development to tabletop game design.
           </p>
         </div>
         <p>
-          If you've stumbled upon my humble site from one of my tools, welcome!
-          You can find support for those tools on my Discord server (link coming
-          soon). You can also join to have a direct line of communication to me
-          to make suggestions and ask questions!
+          If you&apos;ve stumbled upon my humble site from one of my tools,
+          welcome! You can find support for those tools on my Discord server
+          (link coming soon). You can also join to have a direct line of
+          communication to me to make suggestions and ask questions!
         </p>
         <div className="md:absolute bottom-0 left-1/2 md:-translate-x-1/2 md:mt-0 mt-12 bg-pride rounded-lg overflow-clip w-full md:w-1/2">
           <div className="text-sm bg-white/75 text-black w-full h-full p-1 italic">
